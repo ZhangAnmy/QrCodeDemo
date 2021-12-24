@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DirectionalLayout
+xmlns:ohos="http://schemas.huawei.com/res/ohos"
+ohos:height="match_parent"
+ohos:width="match_parent"
+ohos:alignment="center"
+ohos:background_element="$color:cardBgColor"
+ohos:orientation="vertical">
+<Image
+    ohos:id="$+id:image"
+    ohos:width="280px"
+    ohos:height="280px"
+    ohos:layout_alignment="horizontal_center"
+    ohos:scale_mode="zoom_center"/>
+
+<Text
+    ohos:id="$+id:text"
+    ohos:height="match_content"
+    ohos:width="match_content"
+    ohos:top_margin="2vp"
+    ohos:text_size="18fp"
+    ohos:text_color="$color:white"
+    ohos:layout_alignment="horizontal_center"
+    ohos:text="Bonne journée^_^"/>
+
+</DirectionalLayout>

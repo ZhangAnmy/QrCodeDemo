@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "QrCode",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Covid QrCode"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    }
+  ]
+}

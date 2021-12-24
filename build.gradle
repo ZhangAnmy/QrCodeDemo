@@ -1,0 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('D:\\00-Work\\12-WatchProject\\certificate\\anmyWatchAppDebug.p12')
+            storePassword '00000018184A456E54F319E2EBFB3178DF111AB7F0F21C3DA57EA98CED37CB735C2A079DD79C7B44'
+            keyAlias 'anmyWatchDebug'
+            keyPassword '00000018D2A2868063ECDF836BA32978B2D8AF720D86F46A34CB8C3E38FB84F7C74FD6B3EE225C3D'
+            signAlg 'SHA256withECDSA'
+            profile file('D:\\00-Work\\12-WatchProject\\certificate\\PhoneWatchHAPAllDebug.p7b')
+            certpath file('D:\\00-Work\\12-WatchProject\\certificate\\anmyWatchAppDebug.cer')
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'http://repo.ark.tools.huawei.com/artifactory/maven-public/'
+        }
+        maven {
+            url 'http://mirrors.tools.huawei.com/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.4.2'
+        classpath 'com.huawei.ohos:decctest:1.2.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'http://repo.ark.tools.huawei.com/artifactory/maven-public/'
+        }
+        maven {
+            url 'http://mirrors.tools.huawei.com/maven/'
+        }
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "color": [
+    {
+      "name": "blue",
+      "value": "#1F71FF"
+    },
+    {
+      "name": "accentBlue",
+      "value": "#5EA1FF"
+    },
+    {
+      "name": "textColorPrimary",
+      "value": "#FF000000"
+    },
+    {
+      "name": "textColorSecondary",
+      "value": "#8F000000"
+    },
+    {
+      "name": "bgColorPrimary",
+      "value": "#EFEFEF"
+    },
+    {
+      "name": "dividerColor",
+      "value": "#CFCFCF"
+    },
+    {
+      "name": "cardBgColor",
+      "value": "#000000"
+    },
+    {
+      "name": "white",
+      "value": "#FFFFFFFF"
+    },
+    {
+      "name": "gray",
+      "value": "#44000000"
+    },
+    {
+      "name": "orange",
+      "value": "#ffc107"
+    }
+  ]
+}

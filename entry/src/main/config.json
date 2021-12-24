@@ -1,0 +1,76 @@
+{
+  "app": {
+    "bundleName": "com.huawei.anmy",
+    "vendor": "huawei",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.huawei.anmy",
+    "name": "com.huawei.anmy.MyApplication",
+    "mainAbility": "com.huawei.anmy.MainAbility",
+    "deviceType": [
+      "wearable",
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "visible": true,
+        "orientation": "unspecified",
+        "name": "com.huawei.anmy.MainAbility",
+        "icon": "$media:icon2",
+        "description": "$string:mainability_description",
+        "label": "$string:QrCode",
+        "type": "page",
+        "launchType": "standard",
+        "metaData": {
+          "customizeData": [
+            {
+              "name": "hwc-theme",
+              "value": "androidhwext:style/Theme.Emui.Dark.NoActionBar",
+              "extra": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "com.huawei.anmy.QrcodeAbilitySlice",
+        "type": "page"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.GET_WIFI_INFO"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "leave me alone"
+      }
+    ]
+  }
+}
