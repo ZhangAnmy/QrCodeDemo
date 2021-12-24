@@ -60,7 +60,6 @@ public class QrcodeAbilitySlice extends AbilitySlice {
             @Override
             public void onResult(int i) {
                 HmLog.d("####ping result is:" + i);
-                System.out.println("####ping result is:" + i);
                 if (i == 205) {
                     registerReceiver();
                 }
@@ -81,13 +80,11 @@ public class QrcodeAbilitySlice extends AbilitySlice {
             @Override
             public void onSendResult(int resultCode) {
                 HmLog.d("####SendP2PMessage, resultCode is: " + resultCode);
-                System.out.println("####SendP2PMessage, resultCode is: " + resultCode);
             }
 
             @Override
             public void onSendProgress(long progress) {
                 HmLog.d("####SendP2PMessage, progress is: " + progress);
-                System.out.println("####SendP2PMessage, progress is: " + progress);
             }
         };
         if (sendMessage != null && sendCallback != null) {
@@ -99,17 +96,14 @@ public class QrcodeAbilitySlice extends AbilitySlice {
      * Receive the message or file from your app on the phone
      */
     private void registerReceiver() {
-        System.out.println("####Register Receiver");
         mReceiver = message -> {
             switch (message.getType()) {
                 // Receive the short message
                 case HiWearMessage.MESSAGE_TYPE_DATA: {
                     HmLog.d("####Receive P2P Message from Phone");
-                    System.out.println("####Receive P2P Message from Phone");
                     if (message.getData() != null) {
                         String msg = new String(message.getData(), StandardCharsets.UTF_8);
                         CONTENT = msg;
-                        System.out.println("####Receive P2P Message from Phone: " + CONTENT);
                     }
                     generateBarcode();
                     break;
